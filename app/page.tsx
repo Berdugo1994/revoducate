@@ -31,7 +31,7 @@ export default async function HomePage() {
       {/* ── Hero ─────────────────────────────────────────── */}
       <section
         id="hero"
-        className="flex min-h-[80vh] flex-col items-center justify-center text-center"
+        className="flex min-h-[80vh] flex-col items-center justify-start pt-12 text-center"
       >
         <RevoducateLogo
           variant="stacked"
