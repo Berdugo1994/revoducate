@@ -1,10 +1,10 @@
+import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const nextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
-  experimental: {
-    inlineCss: true,
+const nextConfig: NextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
   },
 };
 
