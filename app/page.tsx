@@ -38,7 +38,7 @@ export default async function HomePage() {
           className="mb-10 max-w-xs sm:max-w-sm"
           priority
         />
-        <h1 className="text-3xl font-bold tracking-tight text-revoducate-sage sm:text-4xl">
+        <h1 className="text-4xl font-bold tracking-tight text-revoducate-sage sm:text-4xl">
           {landingT('title')}
         </h1>
         <p className="mt-3 text-xl font-medium text-revoducate-coral">
