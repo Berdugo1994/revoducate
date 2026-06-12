@@ -52,29 +52,29 @@ export function OurPathTimeline({ steps }: OurPathTimelineProps) {
         const StepIcon = stepIcons[index] ?? PiNumberCircleOne;
 
         return (
-        <VerticalTimelineElement
-          key={step.title}
-          visible={true}
-          contentStyle={{
-            background: '#ffffff',
-            color: '#4A4A4A',
-            boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)',
-          }}
-          contentArrowStyle={{ borderRight: '7px solid #ffffff' }}
-          iconStyle={{
-            background: '#ffffff',
-            color: '#FF7F6F',
-            boxShadow: '0 0 0 3px #FF7F6F',
-          }}
-          icon={<StepIcon className="h-8 w-8" />}
-        >
-          <h3 className="text-lg font-semibold text-revoducate-sage">
-            {step.title}
-          </h3>
-          <p className="mt-2 text-sm leading-relaxed text-revoducate-charcoal">
-            {step.description}
-          </p>
-        </VerticalTimelineElement>
+          <VerticalTimelineElement
+            key={step.title}
+            visible={true}
+            contentStyle={{
+              background: '#ffffff',
+              color: '#4A4A4A',
+              boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)',
+            }}
+            contentArrowStyle={{ borderRight: '7px solid #ffffff' }}
+            iconStyle={{
+              background: '#ffffff',
+              color: '#FF7F6F',
+              boxShadow: '0 0 0 3px #FF7F6F',
+            }}
+            icon={<StepIcon className="h-8 w-8" />}
+          >
+            <h3 className="text-lg font-semibold text-revoducate-sage">
+              {step.title}
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-revoducate-charcoal">
+              {step.description}
+            </p>
+          </VerticalTimelineElement>
         );
       })}
     </VerticalTimeline>
