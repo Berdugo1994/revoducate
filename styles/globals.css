@@ -2,6 +2,7 @@
 @import 'tw-animate-css';
 
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -49,27 +50,3 @@
 }
 
 @plugin "@tailwindcss/typography";
-
-.vertical-timeline::before {
-  background: var(--color-revoducate-sage) !important;
-}
-
-.vertical-timeline-element-content {
-  border-top: 3px solid var(--color-revoducate-coral) !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-}
-
-.vertical-timeline-element-content-arrow {
-  border-right-color: #fff !important;
-}
-
-.vertical-timeline-element-icon {
-  background: #ffffff !important;
-  color: var(--color-revoducate-coral) !important;
-  box-shadow: 0 0 0 3px var(--color-revoducate-coral) !important;
-}
-
-.vertical-timeline-element-date {
-  color: var(--color-revoducate-sage) !important;
-  font-weight: 600 !important;
-}

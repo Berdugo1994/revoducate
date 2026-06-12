@@ -1,6 +1,7 @@
 'use client';
 
 import 'react-vertical-timeline-component/style.min.css';
+import './our-path-timeline.css';
 import dynamic from 'next/dynamic';
 import {
   PiNumberCircleFive,
