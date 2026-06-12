@@ -1,5 +1,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
+import logoStackedSrc from '@/public/logo.png';
+import logoHorizontalSrc from '@/public/revoducate-logo-horizontal.png';
 
 type RevoducateLogoProps = {
   variant?: 'stacked' | 'horizontal';
@@ -9,13 +11,13 @@ type RevoducateLogoProps = {
 
 const logoConfig = {
   stacked: {
-    src: '/logo.png',
+    src: logoStackedSrc,
     width: 320,
     height: 320,
     alt: 'REVODUCATE — Learning Is Personal',
   },
   horizontal: {
-    src: '/revoducate-logo-horizontal.png',
+    src: logoHorizontalSrc,
     width: 200,
     height: 60,
     alt: 'REVODUCATE',

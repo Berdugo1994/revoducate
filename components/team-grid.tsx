@@ -1,11 +1,11 @@
 import clsx from 'clsx';
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 
 export type TeamMember = {
   name: string;
   title: string;
   credential?: string;
-  image?: string;
+  image?: string | StaticImageData;
   link?: string;
 };
 
@@ -36,7 +36,7 @@ function TeamAvatar({
   colorIndex,
 }: {
   name: string;
-  image?: string;
+  image?: string | StaticImageData;
   colorIndex: number;
 }) {
   if (image) {

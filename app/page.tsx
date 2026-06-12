@@ -4,6 +4,7 @@ import { RevoducateLogo } from '#/components/revoducate-logo';
 import { TeamGrid } from '#/components/team-grid';
 import { Separator } from '#/components/ui/separator';
 import { getTranslations } from 'next-intl/server';
+import mosheSrc from '@/public/moshe-fekler.png';
 
 export default async function HomePage() {
   const landingT = await getTranslations('Landing');
@@ -19,7 +20,7 @@ export default async function HomePage() {
   }));
 
   const teamMembers = [
-    { name: 'Dr. Moshe Facler, (Ph.D.)', title: 'CEO & Founder', image: '/moshe-fekler.png', link: 'https://il.linkedin.com/in/dr-moshe-facler-ph-d-7644172bb' },
+    { name: 'Dr. Moshe Facler, (Ph.D.)', title: 'CEO & Founder', image: mosheSrc, link: 'https://il.linkedin.com/in/dr-moshe-facler-ph-d-7644172bb' },
     ...[1, 2, 3, 4, 5, 6].map((n) => ({
       name: teamT(`${n}.name`),
       title: teamT(`${n}.title`),
