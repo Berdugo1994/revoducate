@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --color-revoducate-coral: #ff7f6f;
+  --color-revoducate-sage: #6b9080;
+  --color-revoducate-charcoal: #4a4a4a;
+  --color-revoducate-bg: #ffffff;
+}
+
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+.vertical-timeline::before {
+  background: var(--color-revoducate-sage) !important;
+}
+
+.vertical-timeline-element-content {
+  border-top: 3px solid var(--color-revoducate-coral) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+.vertical-timeline-element-content-arrow {
+  border-right-color: #fff !important;
+}
+
+.vertical-timeline-element-icon {
+  background: #ffffff !important;
+  color: var(--color-revoducate-coral) !important;
+  box-shadow: 0 0 0 3px var(--color-revoducate-coral) !important;
+}
+
+.vertical-timeline-element-date {
+  color: var(--color-revoducate-sage) !important;
+  font-weight: 600 !important;
+}

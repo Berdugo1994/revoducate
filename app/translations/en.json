@@ -1,0 +1,71 @@
+{
+  "Nav": {
+    "home": "Home",
+    "ourPath": "Our Path",
+    "whoWeAre": "Who We Are",
+    "contactUs": "Contact Us"
+  },
+  "Landing": {
+    "title": "Welcome to REVODUCATE",
+    "subtitle": "Personalized Learning System",
+    "description": "Personalized learning empowers each learner by adapting content, pace, and method to their unique needs, into a truly meaningful experiences"
+  },
+  "OurPath": {
+    "title": "Our Path"
+  },
+  "WhoWeAre": {
+    "title": "Who We Are",
+    "team": {
+      "1": { "name": "Sarah Cohen", "title": "Head of Learning Design" },
+      "2": { "name": "David Levy", "title": "Curriculum Director" },
+      "3": { "name": "Maya Rosen", "title": "Instructional Coach" },
+      "4": { "name": "Omar Hassan", "title": "Research Lead" },
+      "5": { "name": "Lior Avraham", "title": "Product Manager" },
+      "6": { "name": "Nina Berger", "title": "Student Success Lead" }
+    }
+  },
+  "Timeline": {
+    "step": {
+      "1": {
+        "title": "The Problem",
+        "description": "Our students are overwhelmed with issues and problems, and they need help."
+      },
+      "2": {
+        "title": "Our Research",
+        "description": "We have conducted research to understand the root causes of the problem."
+      },
+      "3": {
+        "title": "Our Solution",
+        "description": "We have developed a solution to the problem."
+      },
+      "4": {
+        "title": "Our Implementation",
+        "description": "We have implemented the solution."
+      },
+      "5": {
+        "title": "Our Evaluation",
+        "description": "We have evaluated the solution."
+      },
+      "6": {
+        "title": "Our Conclusion",
+        "description": "We have concluded the problem."
+      }
+    }
+  },
+  "ContactUs": {
+    "title": "Contact Us",
+    "subtitle": "We'd love to hear from you. Fill in the form and we'll be in touch.",
+    "name": "Full Name",
+    "namePlaceholder": "Your full name",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Your phone number",
+    "email": "Email Address",
+    "emailPlaceholder": "your@email.com",
+    "send": "Send Message"
+  },
+  "NotFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "backHome": "Back to Home"
+  }
+}
