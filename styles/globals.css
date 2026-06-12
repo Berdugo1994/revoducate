@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'tw-animate-css';
 
 @layer base {
   *,
@@ -6,23 +7,47 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--color-border, currentColor);
   }
 }
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Geist font — must use literal names, not CSS var references */
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
 
-@theme {
+  /* shadcn semantic tokens (light mode) */
+  --color-background: #ffffff;
+  --color-foreground: #4a4a4a;
+  --color-card: #ffffff;
+  --color-card-foreground: #4a4a4a;
+  --color-primary: #ff7f6f;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f1f5f3;
+  --color-secondary-foreground: #4a4a4a;
+  --color-muted: #f1f5f3;
+  --color-muted-foreground: #7c8c86;
+  --color-accent: #f1f5f3;
+  --color-accent-foreground: #4a4a4a;
+  --color-destructive: #ef4444;
+  --color-border: #e5e7eb;
+  --color-input: #e5e7eb;
+  --color-ring: #6b9080;
+
+  --radius: 0.5rem;
+  --radius-xs: calc(var(--radius) * 0.5);
+  --radius-sm: calc(var(--radius) * 0.75);
+  --radius-md: calc(var(--radius) * 0.875);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+
+  /* REVODUCATE brand colors */
   --color-revoducate-coral: #ff7f6f;
   --color-revoducate-sage: #6b9080;
   --color-revoducate-charcoal: #4a4a4a;
   --color-revoducate-bg: #ffffff;
 }
 
-@plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
 
 .vertical-timeline::before {

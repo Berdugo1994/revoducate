@@ -12,6 +12,15 @@ export const metadata: Metadata = {
   title: { default: 'REVODUCATE', template: '%s | REVODUCATE' },
   description:
     'Personalized learning empowers each learner by adapting content, pace, and method to their unique needs, into a truly meaningful experiences.',
+  authors: [{ name: 'Eden Berdugo' }],
+  creator: 'Eden Berdugo',
+  metadataBase: new URL('https://revoducate.com'),
+  openGraph: {
+    title: 'REVODUCATE',
+    description:
+      'Personalized learning empowers each learner by adapting content, pace, and method to their unique needs, into a truly meaningful experiences.',
+    siteName: 'REVODUCATE',
+  },
 };
 
 export default async function RootLayout({
@@ -23,10 +32,8 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="scroll-smooth">
-      <body
-        className={`min-h-screen bg-revoducate-bg font-sans text-revoducate-charcoal ${geistSans.variable} antialiased`}
-      >
+    <html lang={locale} className={`scroll-smooth ${geistSans.variable}`}>
+      <body className="min-h-screen bg-revoducate-bg font-sans text-revoducate-charcoal antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <SiteHeader />
           <main className="mx-auto max-w-5xl px-6 py-12">{children}</main>

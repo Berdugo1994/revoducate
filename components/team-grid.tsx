@@ -1,8 +1,12 @@
 import clsx from 'clsx';
+import Image from 'next/image';
 
-type TeamMember = {
+export type TeamMember = {
   name: string;
   title: string;
+  credential?: string;
+  image?: string;
+  link?: string;
 };
 
 type TeamGridProps = {
@@ -26,7 +30,23 @@ function getInitials(name: string) {
     .toUpperCase();
 }
 
-function TeamAvatar({ name, colorIndex }: { name: string; colorIndex: number }) {
+function TeamAvatar({
+  name,
+  image,
+  colorIndex,
+}: {
+  name: string;
+  image?: string;
+  colorIndex: number;
+}) {
+  if (image) {
+    return (
+      <div className="relative h-20 w-20 overflow-hidden rounded-full ring-2 ring-revoducate-sage/20">
+        <Image src={image} alt={name} fill className="object-cover" />
+      </div>
+    );
+  }
+
   return (
     <div
       className={clsx(
@@ -48,11 +68,26 @@ export function TeamGrid({ members }: TeamGridProps) {
           key={member.name}
           className="flex flex-col items-center rounded-xl border border-gray-100 bg-white p-8 text-center shadow-sm"
         >
-          <TeamAvatar name={member.name} colorIndex={index} />
+          {member.link ? (
+            <a
+              href={member.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${member.name} on LinkedIn`}
+              className="transition-opacity hover:opacity-80"
+            >
+              <TeamAvatar name={member.name} image={member.image} colorIndex={index} />
+            </a>
+          ) : (
+            <TeamAvatar name={member.name} image={member.image} colorIndex={index} />
+          )}
           <h3 className="mt-4 text-lg font-semibold text-revoducate-sage">
             {member.name}
           </h3>
           <p className="mt-1 text-sm text-revoducate-charcoal">{member.title}</p>
+          {member.credential && (
+            <p className="mt-1 text-xs text-revoducate-sage">{member.credential}</p>
+          )}
         </article>
       ))}
     </div>

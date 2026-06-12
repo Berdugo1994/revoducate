@@ -2,6 +2,7 @@ import { ContactForm } from '#/components/contact-form';
 import { OurPathTimeline } from '#/components/our-path-timeline';
 import { RevoducateLogo } from '#/components/revoducate-logo';
 import { TeamGrid } from '#/components/team-grid';
+import { Separator } from '#/components/ui/separator';
 import { getTranslations } from 'next-intl/server';
 
 export default async function HomePage() {
@@ -17,10 +18,13 @@ export default async function HomePage() {
     description: timelineT(`${n}.description`),
   }));
 
-  const teamMembers = [1, 2, 3, 4, 5, 6].map((n) => ({
-    name: teamT(`${n}.name`),
-    title: teamT(`${n}.title`),
-  }));
+  const teamMembers = [
+    { name: 'Dr. Moshe Facler, (Ph.D.)', title: 'CEO & Founder', image: '/moshe-fekler.png', link: 'https://il.linkedin.com/in/dr-moshe-facler-ph-d-7644172bb' },
+    ...[1, 2, 3, 4, 5, 6].map((n) => ({
+      name: teamT(`${n}.name`),
+      title: teamT(`${n}.title`),
+    })),
+  ];
 
   return (
     <>
@@ -45,7 +49,7 @@ export default async function HomePage() {
         </p>
       </section>
 
-      <hr className="border-t border-gray-200" />
+      <Separator />
 
       {/* ── Our Path ─────────────────────────────────────── */}
       <section id="our-path" className="scroll-mt-20 py-20">
@@ -55,7 +59,7 @@ export default async function HomePage() {
         <OurPathTimeline steps={timelineSteps} />
       </section>
 
-      <hr className="border-t border-gray-200" />
+      <Separator />
 
       {/* ── Who We Are ───────────────────────────────────── */}
       <section id="who-we-are" className="scroll-mt-20 py-20">
@@ -65,7 +69,7 @@ export default async function HomePage() {
         <TeamGrid members={teamMembers} />
       </section>
 
-      <hr className="border-t border-gray-200" />
+      <Separator />
 
       {/* ── Contact Us ───────────────────────────────────── */}
       <section id="contact-us" className="scroll-mt-20 py-20">
