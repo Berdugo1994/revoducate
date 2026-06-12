@@ -2,10 +2,10 @@ import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
-  experimental: {
-    inlineCss: true,
+  output: 'export',
+  basePath: '/revoducate',
+  images: {
+    unoptimized: true,
   },
 };
 
