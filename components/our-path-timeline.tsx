@@ -60,7 +60,7 @@ export function OurPathTimeline({ steps }: OurPathTimelineProps) {
               color: '#4A4A4A',
               boxShadow: '0 4px 16px rgba(0, 0, 0, 0.08)',
             }}
-            contentArrowStyle={{ borderRight: '7px solid #ffffff' }}
+
             iconStyle={{
               background: '#ffffff',
               color: '#FF7F6F',
